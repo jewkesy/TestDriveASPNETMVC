@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -43,6 +44,16 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add insert logic here
+                var newTopic = new Topic
+                                   {
+                                       Id = Convert.ToInt32(collection["Id"]),
+                                       Name = collection["Name"],
+                                       Colour = ColorTranslator.FromHtml("#" + collection["Colour"])
+                                   };
+
+
+                Topic.Topics.Add(newTopic);
+                TempData["Message"] = "Your topic has been added successfully.";
 
                 return RedirectToAction("Index");
             }
