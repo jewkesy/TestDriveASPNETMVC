@@ -78,7 +78,35 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\colorpicker.css" />
+    <Content Include="Content\images\blank.gif" />
+    <Content Include="Content\images\colorpicker_background.png" />
+    <Content Include="Content\images\colorpicker_hex.png" />
+    <Content Include="Content\images\colorpicker_hsb_b.png" />
+    <Content Include="Content\images\colorpicker_hsb_h.png" />
+    <Content Include="Content\images\colorpicker_hsb_s.png" />
+    <Content Include="Content\images\colorpicker_indic.gif" />
+    <Content Include="Content\images\colorpicker_overlay.png" />
+    <Content Include="Content\images\colorpicker_rgb_b.png" />
+    <Content Include="Content\images\colorpicker_rgb_g.png" />
+    <Content Include="Content\images\colorpicker_rgb_r.png" />
+    <Content Include="Content\images\colorpicker_select.gif" />
+    <Content Include="Content\images\colorpicker_submit.png" />
+    <Content Include="Content\images\custom_background.png" />
+    <Content Include="Content\images\custom_hex.png" />
+    <Content Include="Content\images\custom_hsb_b.png" />
+    <Content Include="Content\images\custom_hsb_h.png" />
+    <Content Include="Content\images\custom_hsb_s.png" />
+    <Content Include="Content\images\custom_indic.gif" />
+    <Content Include="Content\images\custom_rgb_b.png" />
+    <Content Include="Content\images\custom_rgb_g.png" />
+    <Content Include="Content\images\custom_rgb_r.png" />
+    <Content Include="Content\images\custom_submit.png" />
+    <Content Include="Content\images\select.png" />
+    <Content Include="Content\images\select2.png" />
+    <Content Include="Content\images\slider.png" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\colorpicker.js" />
     <Content Include="Views\Todo\Create.aspx" />
     <Content Include="Views\Todo\Edit.aspx" />
     <Content Include="Views\Todo\Index.aspx" />
