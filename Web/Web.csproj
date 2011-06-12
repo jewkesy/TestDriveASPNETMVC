@@ -67,12 +67,14 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ThoughtController.cs" />
     <Compile Include="Controllers\TodoController.cs" />
     <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Thought.cs" />
     <Compile Include="Models\Todo.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +109,9 @@
     <Content Include="Content\images\slider.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\colorpicker.js" />
+    <Content Include="Views\Thought\Create.aspx" />
+    <Content Include="Views\Thought\Index.aspx" />
+    <Content Include="Views\Thought\Process.aspx" />
     <Content Include="Views\Todo\Create.aspx" />
     <Content Include="Views\Todo\Edit.aspx" />
     <Content Include="Views\Todo\Index.aspx" />

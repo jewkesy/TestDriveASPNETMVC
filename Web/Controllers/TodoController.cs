@@ -107,5 +107,25 @@ namespace Web.Controllers
             }
         }
 
+        public ActionResult Convert(Thought thought, string outcome)
+        {
+            var newTodo = new Todo
+                              {
+                                  Title = thought.Name,
+                                  Outcome = outcome,
+                                  Topic = Topic.Topics.Find(topic => topic.Id == thought.Topic.Id)
+                              };
+
+            CreateTodo(newTodo);
+
+            Thought.Thoughts.RemoveAll(thoughtToRemove => thoughtToRemove.Name == thought.Name);
+
+            return RedirectToAction("Process", "Thought");
+        }
+
+        private static void CreateTodo(Todo todo)
+        {
+            Todo.ThingsToBeDone.Add(todo);
+        }
     }
 }

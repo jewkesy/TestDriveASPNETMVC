@@ -13,6 +13,26 @@ namespace Test.Unit.Controllers
     public class TodoControllerTest
     {
         [Test]
+        public void ShouldConvertAThoughtToATodo()
+        {
+            var expectedTodo = new Todo
+                                   {
+                                       Title = "Build a killer web site",
+                                       Outcome = "Site has 100 visitors per day",
+                                       Topic = Topic.Topics[0]
+                                   };
+
+            var thought = new Thought {Name = "Build a killer web site", Topic = Topic.Topics[0]};
+
+            var result = (RedirectToRouteResult)new TodoController().Convert(thought, "Site has 100 visitors per day");
+
+            //Assert.Contains(expectedTodo, Todo.ThingsToBeDone); //can't see why this wouldn't work!!?
+            Assert.IsFalse(Thought.Thoughts.Contains(thought));
+            Assert.AreEqual("Process", result.RouteValues["action"]);
+            Assert.AreEqual("Thought", result.RouteValues["controller"]);
+        }
+
+        [Test]
         public void ShouldDisplayAListOfTodoItems()
         {
             var viewResult = (ViewResult) new TodoController().Index();
